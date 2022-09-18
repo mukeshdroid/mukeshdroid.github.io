@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KettleBell Weight</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1> KettleBell Weight Finder</h1>
+    <h2> for double arm swing</h2>
+
+        <label for="gender">Gender:</label><br>
+        <select name="gender" id="gender">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select> 
+          <br>
+
+
+        <label for="age-group">Age-group:</label><br>
+        <select name="age-group" id="age-group">
+            <option value="0">8-14</option>
+            <option value="1">14-17</option>
+            <option value="2">14-17</option>
+            <option value="3">17-25</option>
+            <option value="4">25-35</option>
+            <option value="5">35-45</option>
+            <option value="6">45-55</option>
+          </select> 
+          <br>
+
+        <label for="weight">weight:</label><br>
+        <select name="weight" id="weight">
+              <option value="0">Underweight</option>
+              <option value="1">Normal</option>
+              <option value="2">Overweight </option>
+              <option value="3">Obese</option>
+            </select> 
+            <br>
+
+        <label for="lifestyle">Lifestyle:</label><br>
+        <select name="lifestyle" id="lifestyle">
+                <option value="0">Sedentary</option>
+                <option value="1">Moderately active</option>
+                <option value="2">Very active</option>
+              </select> 
+              <br>           
+
+        <button type = "button" onclick = get_result()>
+              Calculate
+          </button>
+ 
+        <p id="results">
+            Press calculate to get results.
+
+        </p>
+
+	<script src="index.js"></script>
+  </body>
+</html>
