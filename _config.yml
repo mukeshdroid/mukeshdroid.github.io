@@ -19,9 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Mukesh Tiwari's Blog
+#subtitle:
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A place for my random thoughts
+  A place for my random thoughts.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
@@ -35,6 +36,21 @@ plugins:
 
 # Theme setting
 minimal_mistakes_skin: "dirt"
+
+#Estmated Read Lines
+# to disable this for indivisual page add read_time: false to YAML
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      read_time: true
+
+
+# enable code copy button
+enable_copy_code_button: true
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
