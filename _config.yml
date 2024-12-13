@@ -34,6 +34,8 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-remote-theme
+
 
 # Theme setting
 minimal_mistakes_skin: "dirt"
