@@ -31,6 +31,7 @@ github_username:  jekyll
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 plugins:
+  - jekyll-paginate-v2
   - jekyll-feed
   - jekyll-include-cache
 
@@ -50,6 +51,21 @@ defaults:
 
 # enable code copy button
 enable_copy_code_button: true
+
+#Pagination Settings
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 5
+  permalink: '/page/:num/'  # Pages are index.html inside this folder (default)
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
 
 
 # Exclude from processing.
