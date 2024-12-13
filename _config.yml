@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Mukesh"
-  avatar           : "/assets/images/avatar.jpg"
+  avatar           : "/assets/images/avatar.jpeg"
   bio              : "I love maths cs and cryptography"
   location         : "Earth"
   email            :
