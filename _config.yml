@@ -21,7 +21,7 @@ title                    : "Mukesh's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Mukesh Tiwari"
-description              : "An amazing website."
+description              : "My Personal Site"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Mukesh"
   avatar           : "/assets/images/avatar.jpeg"
-  bio              : "I love maths cs and cryptography"
+  bio              : "I love maths, cs and cryptography"
   location         : "Earth"
   email            :
   links:
@@ -227,8 +227,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: Asia/Kathmandu
 
 # Pagination with jekyll-paginate
 # paginate: 5 # amount of posts to show
