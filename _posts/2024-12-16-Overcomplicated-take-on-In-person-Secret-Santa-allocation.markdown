@@ -3,8 +3,13 @@ layout: single
 title:  "Overcomplicated take on In person Secret Santa allocation"
 date:   2024-12-16 15:43:00 +0530
 categories: cryptography
+toc: true
+toc_sticky: true
 ---
 
+---
+
+## How it started
 On a random friday, amist random discussions, [Bibek dae](https://bewakes.com) suggsted that we have some sort of decentralized protocol to allocate names for secret santa this year.
 
 I was certain that some implemntation of this must exist and indeed that was true.
@@ -15,6 +20,9 @@ It was also possible to use many of the online services which promise to do the 
 
 Since, all of us would be in person, I set out to find a method that would involve little to no tech and would be simple enough to explain in a few minutes. Afterall, the real beauty of cryptography is only revealed when one fully comprehends the algorithm and all its steps and still is amused by the implications.
 
+---
+
+## The Naive Approach
 The easiest idea is to draw names from a bowl. We make a chit with each person's name that is then picked randomly. The result is however a permutation and not a [derangement](https://en.wikipedia.org/wiki/Derangement) as we desired. We can simply repeat if someone objects and can prove that they got their own name by revealing their chit. On average, how many times do we need to repeat this before no one is assiged themselves as their own secret santa?
 
 Let us suppose we have $$n$$ people.
@@ -41,7 +49,7 @@ $$ E(\mathbb{X}) = \frac{1}{p}$$
 The average number of rounds needed will be then $$e$$ which is approximately $$2.71828$$. Its not a lot but still leaves room to improve. Afterall, it would be satisying to have a valid allocation in the very first attempt. Also, would it not be awesome to have a way to ensure that we can find out if someone doesnot bring a gift but not reveal other allocations in the process.
 
 ---
-
+## Figuring out Requirements
 Before we go on exploring further ideas, it might be helpful to elucidate the exact requirements. Sjouke Mauw Et al. lay out the following requirements in the paper Security Protocols for Secret Santa. [^3]
 
 [^3]: [Security Protocols for Secret Santa by Sjouke Mauw Et al.](http://link.springer.com/10.1007/978-3-662-45921-8_26)
