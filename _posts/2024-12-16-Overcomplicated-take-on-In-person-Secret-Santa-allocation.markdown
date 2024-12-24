@@ -50,7 +50,3 @@ Before we go on exploring further ideas, it might be helpful to elucidate the ex
 
 ---
 ![Secret Santa Allocation Algorithm 2](/assets/images/secret-santa-soln-stack-exchange.png)
-
-
-
-$$ $$
