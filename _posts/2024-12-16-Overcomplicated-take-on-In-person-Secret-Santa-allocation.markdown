@@ -1,11 +1,12 @@
 ---
 layout: single
 title:  "Overcomplicated take on In person Secret Santa allocation"
-date:   2024-12-16 15:43:00 +0530
+date:   2024-12-24 15:43:00 +0530
 categories: cryptography
 toc: true
 toc_sticky: true
 author_profile: false
+tags: [protocols]
 ---
 
 ## How it started
@@ -80,4 +81,4 @@ The question is that given the existence of such a box, is there something cleve
 
 - Can the verifiability be modularized and abstracted to decouple it from the specifics of secret santa problem?
 
-## Footnotes
+## References
