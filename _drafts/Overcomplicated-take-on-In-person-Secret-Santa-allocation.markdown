@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Overcomplicated take on In person Secret Santa allocation"
+title:  "In Person Secret Santa Allocation - An overly complicated take"
 # date:   2024-12-25 15:43:00 +0530
 categories: cryptography
 toc: true
@@ -13,11 +13,7 @@ tags: [protocols]
 
 On a random friday, amist random discussions, [Bibek dae](https://bewakes.com) suggsted that we have some sort of decentralized protocol to allocate names for secret santa this year.
 
-I was certain that some implemntation of this must exist and indeed that was true.
-<!-- Add some here -->
-However, running nodes didn't seem like a fun activity for a bunch of people sitting around (or could be, yet to try it out) and not everyone is equally comfortable with tech.
-
-It was also possible to use many of the online services which promise to do the allocation for you. This delegates the task to a trusted third party which maynot be that much an issue. The real concern could be the sensitive contact informtion we are sharing with those services.
+I was certain that some implemntation of this must exist and indeed that was true. I found one by [@nicholaspun](https://github.com/nicholaspun/secret-santa) and another by [@kielejocain](https://github.com/kielejocain/decentralized-santa). It is also possible to use many of the online services which promise to do the allocation for you. This delegates the task to a trusted third party which maynot be that much an issue. The real concern is the sensitive contact informtion we are sharing with those services.
 
 Since, all of us would be in person, I set out to find a method that would involve little to no tech and would be simple enough to explain in a few minutes. Afterall, the real beauty of cryptography is only revealed when one fully comprehends the algorithm and all its steps and still is amused by the implications.
 
@@ -50,13 +46,21 @@ The average number of rounds needed will be then $$e$$ which is approximately $$
 
 ## Figuring out Requirements
 
-Before we go on exploring further ideas, it might be helpful to elucidate the exact requirements. Sjouke Mauw Et al. lay out the following requirements in the paper Security Protocols for Secret Santa. [^3]
+Before we go on exploring further ideas, it might be helpful to elucidate the exact requirements. Sjouke Mauw et al. lay out the following requirements in the paper Security Protocols for Secret Santa. [^3]
 
 [^3]: [Security Protocols for Secret Santa by Sjouke Mauw Et al.](http://link.springer.com/10.1007/978-3-662-45921-8_26)
 
 ![Secret Santa Problem Requirements](/assets/images/secret-santa-problem-specification.png)
 
+The first requirement of $$f$$ being a bijection is composed of two parts, f must be surjective and injective. The first of the two makes sure no one is left out and each person is assigned to someone as their secrets santa. The second part ensures that each person only has to gift one person and on the same note, each person only gets gift from one person.
+
+The second requirement of irreflexity ensures we are not assigned as our own secret santa. The third property of randomness ensures that the draws are fair and cannot be influenced. The fourth requirement of anonimity tells that we can know no information about allocation should be revealed. For two participants, we know the allocation (duh!). However, we still donot invalidate our requirement 4 as it was deducible just from requiremnt 2.
+
+The last requiremnt is what is missing from our naive scheme above. We want verfiabiloity i.e, the ability to idenitfy the secret santa assigned to the party who didnt get the gift.
+
 ## A better Approach
+
+While looking for better algorithms, I stumbled over the following [algorithm by @hmakholm posted at stackexchnage](https://math.stackexchange.com/questions/1054644/santa-is-secretly-deranged-or-how-to-hand-generate-assignments-for-a-gift-exch/1054673#1054673).
 
 ![Secret Santa Allocation Algorithm 2](/assets/images/secret-santa-soln-stack-exchange.png)
 
@@ -66,7 +70,7 @@ The above scheme lacks verifiability.
 
 To gain that, we can utilize a tamper proof mailing packets. We place all of them in the packet and seal it. Everyone signs it and it is deligated to an individual. They need to reproduce it at the gift distribution and everyone can verify their signatures.
 
-We have made another assumption here. 
+We have made another assumption here.
 "People would love to see who their secret santa is but not at the cost of everyone knowing that they know it"
 
 To add that, we could have a box that can only be open if everyone agrees.
