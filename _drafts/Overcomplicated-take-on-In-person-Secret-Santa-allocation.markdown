@@ -23,7 +23,7 @@ The easiest idea is to draw names from a bowl. We make a chit with each person's
 
 Let us suppose we have $$n$$ people.
 
-The number of possible permutations is $$n!$$ which is the usual factorial function.
+The number of possible permutations is $$n!$$ (n [factorial](https://en.wikipedia.org/wiki/Factorial)).
 
 The number of possible derangements is $$!n$$ where $$!n$$ can be defined recursively as [^1]
 
@@ -34,7 +34,7 @@ $$ !n = (n-1)(!(n-1) + !(n-2)) $$
 The probabilty of getting a derangement is thus $$ \frac{!n}{n!} $$. A plot of these values looks like 
 <!-- add plot and link to plot here -->
 
-As you must have guessed from the plot, the value does indeed converge to $$ \frac{1}{e}$$ !
+As you must have guessed from the plot, the value does indeed converge to $$ \frac{1}{e}$$.
 
 We can get the average number of rounds needed by computing the expected value of the random variable with a geometric distribution. If the success probability is $$p$$, then the expected value is given by[^2]
 
@@ -56,7 +56,7 @@ The first requirement of $$f$$ being a bijection is composed of two parts, f mus
 
 The second requirement of irreflexity ensures we are not assigned as our own secret santa. The third property of randomness ensures that the draws are fair and cannot be influenced. The fourth requirement of anonimity tells that we can know no information about allocation should be revealed. For two participants, we know the allocation (duh!). However, we still donot invalidate our requirement 4 as it was deducible just from requiremnt 2.
 
-The last requiremnt is what is missing from our naive scheme above. We want verfiabiloity i.e, the ability to idenitfy the secret santa assigned to the party who didnt get the gift.
+The last requiremnt is what is missing from our naive scheme above. We want verfiability i.e, the ability to idenitfy the secret santa assigned to the party who didnt get the gift.
 
 ## A better Approach
 
@@ -71,18 +71,18 @@ The above scheme lacks verifiability.
 To gain that, we can utilize a tamper proof mailing packets. We place all of them in the packet and seal it. Everyone signs it and it is deligated to an individual. They need to reproduce it at the gift distribution and everyone can verify their signatures.
 
 We have made another assumption here.
-"People would love to see who their secret santa is but not at the cost of everyone knowing that they know it"
+> "People would love to see who their secret santa is but not at the cost of everyone knowing that they know it"
 
-To add that, we could have a box that can only be open if everyone agrees.
+If anyone doesnot recieve gift, the 
 
-Then we could place the envelops in the box and check if someone doesn't receive a gift.
-
-The question is that given the existence of such a box, is there something clever that can be done?
+## The Happy Path
 
 ## Future Works
 
-- Could any of these schemes made to work when we have restrictions? say for example we have ideas where we have restriction on the possible assignments.
+- Could any of these schemes made to work elegantly when we have restrictions? say for example we have ideas where we have restriction on the possible assignments.
 
 - Can the verifiability be modularized and abstracted to decouple it from the specifics of secret santa problem?
+
+- Instead of tamper proof envelops, we could use a box padlocked with n locks such that it can only be opened if everyone removes their lock. Given the existence of such a box, is there something clever that can be done?
 
 ## References
