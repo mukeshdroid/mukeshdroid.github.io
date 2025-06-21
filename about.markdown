@@ -24,8 +24,8 @@ I'm always interested in discussing research collaborations and technical challe
 
 **Contact Me:**
 
-- **LinkedIn:** [linkedin.com/in/mukesh-tiwari](https://www.linkedin.com/in/tiwarimukesh12/)
-- **GitHub:** [github.com/mukeshtiwari](https://github.com/mukeshdroid)
+- **LinkedIn:** [linkedin.com/in/tiwarimukesh12](https://www.linkedin.com/in/tiwarimukesh12/)
+- **GitHub:** [github.com/mukeshdroid](https://github.com/mukeshdroid)
 
 ---
 
